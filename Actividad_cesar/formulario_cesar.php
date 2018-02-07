@@ -8,7 +8,7 @@
   <body>
     <center>
       <form class="header" action="registro.php" method="post"> <!-- formulario que registra a un usuario -->
-        <h1>MENSAJE CODIFICADO</h1>
+        <h1>CODIFICAR MENSAJE</h1>
         <div id="registro">
           <table>
             <tr>
