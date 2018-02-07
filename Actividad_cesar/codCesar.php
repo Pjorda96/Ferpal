@@ -1,15 +1,26 @@
 <?php
-$contadorGlobal=0;
+$fraseGET=$_POST['frase'];
+//añadir frase al array
+$frase[];
+
+while ()
+
+$contadorGlobal=;
+$contadorFila=$contadorGlobal/7;
+
+
 //para un numero par de la palabra
 function par(){
-  arrayResultado[$contadorGlobal]=arrayPar[$contadorGlobal];
 
-  $contadorGlobal=$contadorGlobal+1;
+
+  arrayResultado[$contadorGlobal]=arrayPar[$contadorGlobal][$contadorFila];
+
+  $contadorGlobal++;
 }
 function impar(){
-  arrayResultado[$contadorGlobal]=arrayPar[$contadorGlobal+28];
+  arrayResultado[$contadorGlobal]=arrayPar[$contadorGlobal][$contadorFila];
 
-  $contadorGlobal=$contadorGlobal+1;
+  $contadorGlobal++;
 }
 
 
