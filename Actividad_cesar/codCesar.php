@@ -3,7 +3,7 @@ $contadorGlobal=0;
 //para un numero par de la palabra
 function par(){
   arrayResultado[$contadorGlobal]=arrayPar[$contadorGlobal];
-  
+
   $contadorGlobal=$contadorGlobal+1;
 }
 function impar(){
@@ -12,4 +12,7 @@ function impar(){
   $contadorGlobal=$contadorGlobal+1;
 }
 
+
+  $descodificada=$_POST['Frase_descodificada'];
+  echo $descodificada ;
 ?>
