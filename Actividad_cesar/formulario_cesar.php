@@ -7,7 +7,7 @@
   </head>
   <body>
     <center>
-      <form class="header" action="registro.php" method="post"> <!-- formulario que registra a un usuario -->
+      <form class="header" action="codCesar.php" method="post"> <!-- formulario que registra a un usuario -->
         <h1>CODIFICAR MENSAJE</h1>
         <div id="registro">
           <table>
