@@ -1,24 +1,52 @@
 <?php
+//recogemos frase descodificada PDOStatement
+//creamos arrays
+function Inicio()
+{
+  $fraseGET=$_POST['Frase_descodificada'];
+  $arrayNormal= array
+  (
+    array("a","b","c","d","e","f","g"),
+    array("h","i","j","k","l","m","n"),
+    array("o","p","q","r","s","t","u"),
+    array("v","w","x","y","z","$","%")
+  );
+  //arrayNumAscii
+  $arrayAsci= array();
 
-
-$fraseGET=$_POST['Frase_descodificada'];
-$arrayNormal= array
-(
-  array("a","b","c","d","e","f","g"),
-  array("h","i","j","k","l","m","n"),
-  array("o","p","q","r","s","t","u"),
-  array("v","w","x","y","z","$","%")
-);
-
-//añadir frase al array frase
-$frase = array();
-for ($i=0; $i<=(strlen($fraseGET)-1);$i++){
-  $fraseGET[$i]=$frase{$i};
+  //añadir frase al array frase
+  $frase = array();
+  for ($i=0; $i<=(strlen($fraseGET)-1);$i++)
+  {
+    //$fraseGET[$i]=$frase{$i};
+    $frase{$i}=$fraseGET[$i];
+    echo $frase[$i]."--";
+    $arrayAsci[$i]=ord($frase[$i]);
+    echo $arrayAsci[$i]."<br>";
+  }
+  //$contadorGlobal=0;
+  Codificar($arrayAsci);
 }
 
-$contadorGlobal=0;
-//$contadorFila=$contadorGlobal/7;
+function Codificar ($_arrayAsci)
+{
+  $arrayOriginal = $_arrayAsci;
 
+  for ($i=0; $i < count($_arrayAsci); $i++)
+  {
+    $_arrayAsci[$i]=$_arrayAsci[$i]+3;
+    echo chr($_arrayAsci[$i]);
+  }
+
+  $json_string = json_encode($_arrayAsci);
+  echo $json_string;
+  header ("Location: transformacion.js");
+
+}
+
+Inicio();
+//$contadorFila=$contadorGlobal/7;
+/*
 //falta calcular el $contadorGlobal y el $contadorFila para cada letra
 
 //para un numero par de la frase
@@ -49,4 +77,5 @@ echo $descodificada ; //wtf es esto??
 header('Location: formulario_cesar.php');
 
 //chr(ascii) ord($string)
+*/
 ?>
