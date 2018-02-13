@@ -22,13 +22,20 @@ function Inicio()
     //comprobamos si el caracter es un espacio si lo es le pondremos el $
     if($fraseGET[$i]!=" ")
     {
-
-      $frase{$i}=$fraseGET[$i];
+      for ($j=0; $j < count($arrayNormal); $j++)
+      {
+        for ($w=0; $w < count($arrayNormal[$j]); $w++)
+        {
+          if($arrayNormal[$j][$w] == $fraseGET[$i])
+          $frase{$i}=$fraseGET[$i];
+        }
+      }
+    //  $frase{$i}=$fraseGET[$i];
 
     }
       else
       {
-        $frase{$i}="$";
+        $frase{$i}=$arrayNormal[3][5];
       }
 
     echo $frase[$i]."--";
