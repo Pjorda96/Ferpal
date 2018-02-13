@@ -1,4 +1,3 @@
-
 $.ajax({
   type: "GET",
   datatype: 'json',
@@ -8,3 +7,4 @@ $.ajax({
      var arrayAscii = jQuery.parseJSON(data);
   }
 });
+console.log(arrayAsci);

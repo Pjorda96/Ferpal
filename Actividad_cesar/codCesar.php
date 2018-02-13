@@ -13,7 +13,7 @@ function Inicio()
   );
   //arrayNumAscii
   $arrayAsci= array();
-
+  $prueba= array();
   //añadir frase al array frase
   $frase = array();
   for ($i=0; $i<=(strlen($fraseGET)-1);$i++)
@@ -34,16 +34,10 @@ function Codificar ($_arrayAsci)
 
   for ($i=0; $i < count($_arrayAsci); $i++)
   {
-    $_arrayAsci[$i]=$_arrayAsci[$i]+3;
-    echo chr($_arrayAsci[$i]);
+    $prueba[$i]=$_arrayAsci[$i]+3;
+    echo chr($prueba[$i]);
   }
-
-  $json_string = json_encode($_arrayAsci);
-  echo $json_string;
-  header ("Location: transformacion.js");
-
 }
-
 Inicio();
 //$contadorFila=$contadorGlobal/7;
 /*
@@ -78,4 +72,13 @@ header('Location: formulario_cesar.php');
 
 //chr(ascii) ord($string)
 */
+?>
+
+
+
+
+
+
+<?php 
+//la cosa es, de el echo de arriba, en la funcion codificar, guardar en una variable el resultado (con la funcion implode se pasa de arrays a strings) e imprimirlo en el formulario (otra página php) mediante el GET (pasarle la variable) el el formulario solo queda ponerle el nombre de la variable con la nueva palabra codificada
 ?>
