@@ -16,6 +16,7 @@ function Inicio()
   $prueba= array();
   //añadir frase al array frase
   $frase = array();
+
   for ($i=0; $i<=(strlen($fraseGET)-1);$i++)
   {
     //$fraseGET[$i]=$frase{$i};
@@ -30,13 +31,29 @@ function Inicio()
 
 function Codificar ($_arrayAsci)
 {
+  //array que recoge el array ascii
   $arrayOriginal = $_arrayAsci;
-
+  //array cambio de ascii a string osea letras
+  $ArraystringCodificado =array();
+  //string envio
+  $stringEnvio="";
+  //bucle para mover las letras tres posiciones y recogemos el valor ascii de la posc 3 de cada Ejemplo :letra a = d
   for ($i=0; $i < count($_arrayAsci); $i++)
   {
     $prueba[$i]=$_arrayAsci[$i]+3;
-    echo chr($prueba[$i]);
+    $ArraystringCodificado[$i]= chr($prueba[$i]);
   }
+  $stringEnvio= implode($ArraystringCodificado);
+  /*
+  $url = '002.php';
+   $url .= '?firstName=Code';
+   $url .= '&lastName=Project';
+   $url .= '&purpose=answers';
+
+   header('Location: '.$url);
+   */
+  header( 'Location: formulario_cesar.php?string='.$stringEnvio );
+
 }
 Inicio();
 //$contadorFila=$contadorGlobal/7;
@@ -79,6 +96,6 @@ header('Location: formulario_cesar.php');
 
 
 
-<?php 
+<?php
 //la cosa es, de el echo de arriba, en la funcion codificar, guardar en una variable el resultado (con la funcion implode se pasa de arrays a strings) e imprimirlo en el formulario (otra página php) mediante el GET (pasarle la variable) el el formulario solo queda ponerle el nombre de la variable con la nueva palabra codificada
 ?>

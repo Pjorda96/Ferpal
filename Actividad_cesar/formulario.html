@@ -4,21 +4,17 @@
     <meta charset="utf-8">
     <title>Registro</title>
     <link rel="stylesheet" type="text/css" href="formulario_cesar.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="transformacion.js"></script>
   </head>
   <body>
-    <?php
-    if(empty($_GET))
-      $imprimirvariable = "Codificado";
-    else
-        $imprimirvariable = $_GET['string'];
-     ?>
     <center>
       <form id="frase" class="header" action="codCesar.php" method="post"> <!-- formulario que registra a un usuario -->
         <h1>CODIFICAR MENSAJE</h1>
         <div id="registro">
           <table>
             <tr>
-              <td><input id="codificado" type="text"  name="Frase_codificada" placeholder="Introduce aquí la frase descodificada" value=<?php echo $imprimirvariable; ?> /></td>
+              <td><input type="text"  name="Frase_codificada" placeholder="Frase codificada" value="" /></td>
             </tr>
             <tr>
               <td><input type="text" name="Frase_descodificada" placeholder="Introduce aquí la frase descodificada" required/></td>
@@ -26,7 +22,7 @@
           </table>
         </div>
         <br>
-        <button type="submit">Codificar</button>
+        <button type="submit" onclick="Comprobar()">Codificar</button>
       </form>
     </center>
   </body>
