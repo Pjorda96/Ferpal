@@ -12,7 +12,7 @@
         <div id="registro">
           <table>
             <tr>
-              <td><input type="text"  name="Frase_codificada" placeholder="Frase codificada" value=""/></td>
+              <td><input type="text"  readonly name="Frase_codificada" placeholder="Frase codificada" value=""/></td>
             </tr>
             <tr>
               <td><input type="text" name="Frase_descodificada" placeholder="Introduce aquí la frase descodificada"/></td>

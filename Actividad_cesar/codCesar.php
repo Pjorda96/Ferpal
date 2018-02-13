@@ -1,8 +1,8 @@
 <?php
-$fraseGET=$_POST['frase'];
+$fraseGET=$_POST['Frase_descodificada'];
 
 //añadir frase al array frase
-$frase[];
+$frase = array();
 for ($i=0; $i<=(strlen($fraseGET)-1);$i++){
   $fraseGET[$i]=$frase{$i};
 }
@@ -17,10 +17,10 @@ function par($letra){
 
   arrayResultado[$contadorGlobal][$contadorFila]=arrayPar[$contadorGlobal][$contadorFila];
 
-  $contadorGlobal++;
+  contadorGlobal++;
 }
 function impar($letra){
-  arrayResultado[$contadorGlobal][$contadorFila]=arrayPar[$contadorGlobal][$contadorFila];
+  $arrayResultado[$contadorGlobal][$contadorFila]=arrayPar[$contadorGlobal][$contadorFila];
 
   $contadorGlobal++;
 }
