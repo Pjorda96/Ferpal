@@ -10,14 +10,16 @@ for ($i=0; $i<=(strlen($fraseGET)-1);$i++){
 $contadorGlobal=0;
 //$contadorFila=$contadorGlobal/7;
 
-//para un numero par de la palabra
-function par(){
+//falta calcular el $contadorGlobal y el $contadorFila para cada letra
+
+//para un numero par de la frase
+function par($letra){
 
   arrayResultado[$contadorGlobal][$contadorFila]=arrayPar[$contadorGlobal][$contadorFila];
 
   $contadorGlobal++;
 }
-function impar(){
+function impar($letra){
   arrayResultado[$contadorGlobal][$contadorFila]=arrayPar[$contadorGlobal][$contadorFila];
 
   $contadorGlobal++;
@@ -29,6 +31,8 @@ while($contadorGlobal<strlen($fraseGET)){
   else impar($frase{$contadorGlobal});
 }
 
+//falta crear un string con el array resultado
+while()
 
 $descodificada=$_POST['Frase_descodificada'];
 echo $descodificada ; //wtf es esto??
