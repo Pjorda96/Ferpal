@@ -1,5 +1,14 @@
 <?php
+
+
 $fraseGET=$_POST['Frase_descodificada'];
+$arrayNormal= array
+(
+  array("a","b","c","d","e","f","g"),
+  array("h","i","j","k","l","m","n"),
+  array("o","p","q","r","s","t","u"),
+  array("v","w","x","y","z","$","%")
+);
 
 //añadir frase al array frase
 $frase = array();
@@ -38,4 +47,6 @@ $descodificada=$_POST['Frase_descodificada'];
 echo $descodificada ; //wtf es esto??
 
 header('Location: formulario_cesar.php');
+
+//chr(ascii) ord($string)
 ?>
