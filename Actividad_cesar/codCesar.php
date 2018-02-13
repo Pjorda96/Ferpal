@@ -3,7 +3,7 @@
 //creamos arrays
 function Inicio()
 {
-  $fraseGET=$_POST['Frase_descodificada'];
+  $fraseGET=strtolower($_POST['Frase_descodificada']);
   $arrayNormal= array
   (
     array("a","b","c","d","e","f","g"),
@@ -19,10 +19,22 @@ function Inicio()
 
   for ($i=0; $i<=(strlen($fraseGET)-1);$i++)
   {
-    //$fraseGET[$i]=$frase{$i};
-    $frase{$i}=$fraseGET[$i];
+    //comprobamos si el caracter es un espacio si lo es le pondremos el $
+    if($fraseGET[$i]!=" ")
+    {
+
+      $frase{$i}=$fraseGET[$i];
+
+    }
+      else
+      {
+        $frase{$i}="$";
+      }
+
     echo $frase[$i]."--";
-    $arrayAsci[$i]=ord($frase[$i]);
+      $arrayAsci[$i]=ord($frase[$i]);
+
+
     echo $arrayAsci[$i]."<br>";
   }
   //$contadorGlobal=0;
@@ -41,17 +53,13 @@ function Codificar ($_arrayAsci)
   for ($i=0; $i < count($_arrayAsci); $i++)
   {
     $prueba[$i]=$_arrayAsci[$i]+3;
+    echo $prueba[$i]."<br>";
     $ArraystringCodificado[$i]= chr($prueba[$i]);
   }
   $stringEnvio= implode($ArraystringCodificado);
-  /*
-  $url = '002.php';
-   $url .= '?firstName=Code';
-   $url .= '&lastName=Project';
-   $url .= '&purpose=answers';
+  echo $stringEnvio;
 
-   header('Location: '.$url);
-   */
+
   header( 'Location: formulario_cesar.php?string='.$stringEnvio );
 
 }
