@@ -48,7 +48,7 @@ function Inicio()
   Codificar($arrayAsci);
 }
 
-function Codificar ($_arrayAsci)
+/*function Codificar ($_arrayAsci)
 {
   //array que recoge el array ascii
   $arrayOriginal = $_arrayAsci;
@@ -69,7 +69,36 @@ function Codificar ($_arrayAsci)
 
   header( 'Location: formulario_cesar.php?string='.$stringEnvio );
 
+}*/
+function Codificar ($_arrayAsci)
+{
+  //array que recoge el array ascii
+  $arrayOriginal = $_arrayAsci;
+  //array cambio de ascii a string osea letras
+  $ArraystringCodificado =array();
+  //string envio
+  $stringEnvio="";
+  //bucle para mover las letras tres posiciones y recogemos el valor ascii de la posc 3 de cada Ejemplo :letra a = d
+  for ($i=0; $i < count($_arrayAsci); $i++)
+  {
+    if($i%2==0){
+      $prueba[$i]=$_arrayAsci[$i]+3;
+      echo $prueba[$i]."<br>";
+      $ArraystringCodificado[$i]= chr($prueba[$i]);
+    }else {
+      $prueba[$i]=$_arrayAsci[$i]-5;
+      echo $prueba[$i]."<br>";
+      $ArraystringCodificado[$i]= chr($prueba[$i]);
+    }
+  }
+  $stringEnvio= implode($ArraystringCodificado);
+  echo $stringEnvio;
+
+
+  header( 'Location: formulario_cesar.php?string='.$stringEnvio );
+
 }
+
 Inicio();
 //$contadorFila=$contadorGlobal/7;
 /*
