@@ -44,32 +44,10 @@ function Inicio()
 
     echo $arrayAsci[$i]."<br>";
   }
-  //$contadorGlobal=0;
   Codificar($arrayAsci);
 }
 
-/*function Codificar ($_arrayAsci)
-{
-  //array que recoge el array ascii
-  $arrayOriginal = $_arrayAsci;
-  //array cambio de ascii a string osea letras
-  $ArraystringCodificado =array();
-  //string envio
-  $stringEnvio="";
-  //bucle para mover las letras tres posiciones y recogemos el valor ascii de la posc 3 de cada Ejemplo :letra a = d
-  for ($i=0; $i < count($_arrayAsci); $i++)
-  {
-    $prueba[$i]=$_arrayAsci[$i]+3;
-    echo $prueba[$i]."<br>";
-    $ArraystringCodificado[$i]= chr($prueba[$i]);
-  }
-  $stringEnvio= implode($ArraystringCodificado);
-  echo $stringEnvio;
 
-
-  header( 'Location: formulario_cesar.php?string='.$stringEnvio );
-
-}*/
 function Codificar ($_arrayAsci)
 {
   //array que recoge el array ascii
@@ -100,46 +78,3 @@ function Codificar ($_arrayAsci)
 }
 
 Inicio();
-//$contadorFila=$contadorGlobal/7;
-/*
-//falta calcular el $contadorGlobal y el $contadorFila para cada letra
-
-//para un numero par de la frase
-function par($letra){
-
-  arrayResultado[$contadorGlobal][$contadorFila]=arrayPar[$contadorGlobal][$contadorFila];
-
-  contadorGlobal++;
-}
-function impar($letra){
-  $arrayResultado[$contadorGlobal][$contadorFila]=arrayPar[$contadorGlobal][$contadorFila];
-
-  $contadorGlobal++;
-}
-
-//se pasa el carácter que toque según si la posición en la frase es par o impar
-while($contadorGlobal<strlen($fraseGET)){
-  if ($contadorGlobal%2==0) par($frase{$contadorGlobal});
-  else impar($frase{$contadorGlobal});
-}
-
-//falta crear un string con el array resultado
-while()
-
-$descodificada=$_POST['Frase_descodificada'];
-echo $descodificada ; //wtf es esto??
-
-header('Location: formulario_cesar.php');
-
-//chr(ascii) ord($string)
-*/
-?>
-
-
-
-
-
-
-<?php
-//la cosa es, de el echo de arriba, en la funcion codificar, guardar en una variable el resultado (con la funcion implode se pasa de arrays a strings) e imprimirlo en el formulario (otra página php) mediante el GET (pasarle la variable) el el formulario solo queda ponerle el nombre de la variable con la nueva palabra codificada
-?>
