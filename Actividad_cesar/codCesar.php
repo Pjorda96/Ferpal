@@ -43,7 +43,7 @@ function Inicio()
 
 
     echo $arrayAsci[$i]."<br>";
-  }
+  } 
   Codificar($arrayAsci);
 }
 
