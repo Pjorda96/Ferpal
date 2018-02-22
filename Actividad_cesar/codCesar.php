@@ -43,7 +43,7 @@ function Inicio()
 
 
     echo $arrayAsci[$i]."<br>";
-  } 
+  }
   Codificar($arrayAsci);
 }
 
@@ -64,7 +64,7 @@ function Codificar ($_arrayAsci)
       echo $prueba[$i]."<br>";
       $ArraystringCodificado[$i]= chr($prueba[$i]);
     }else {
-      $prueba[$i]=$_arrayAsci[$i]-5;
+      $prueba[$i]=$_arrayAsci[$i]+3;
       echo $prueba[$i]."<br>";
       $ArraystringCodificado[$i]= chr($prueba[$i]);
     }
