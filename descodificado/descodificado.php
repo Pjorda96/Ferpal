@@ -31,7 +31,8 @@
     $input_array[]=$result;
     $fmove = $result;
   }
-echo $input_array; 
-
+for ($i=0;$i<sizeof($input_array);$i++) {
+  echo $input_array[$i];
+}
 
  ?>

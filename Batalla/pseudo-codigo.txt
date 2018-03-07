@@ -1,0 +1,26 @@
+Char = string introducido
+char_val = valor ascii(string introducido)
+
+//bloque 1
+
+1-si (char_val + fmove )>122
+
+
+TRUE a = char_val + fmove - 122
+     result = 32 - 1 + a
+
+FALSE result = char_val + fmove 
+
+//bloque 2
+
+2-si (resultado > 122) 
+
+TRUE a = result + fmove - 122
+     result = 32 - 1 + a
+
+FALSE se queda igual 
+
+fmove = result 
+
+//bloque 3
+ todo es un for mientras que la longitud del string sea mayor que i el cual de incrementa
