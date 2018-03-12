@@ -1,0 +1,19 @@
+1. Una consulta que nos saque todos los conductores de apellido empezado en C.
+
+2.Los conductores que tuvieron la entrega el dia 3 de marzo.
+
+3.El número de clientes de cada oficina.
+
+4.Clientes que hicieron encargo el día 14 de marzo del 2016.
+
+5.Sueldo total anual de todos los empleados de la empresas menos los de Valencia
+
+6.Media de clientes que pagan con cada método de pago, mensual
+
+7.Sacar las matrículas de los camiones cuyos conductores se llamen Martinez
+
+8.Número de clientes que tiene cada base y el dia que fueron registrados en ella.
+
+9. Cantidad de repartos por cada repartidor en el último año y sacar la media anal.
+
+10.Sucursal que más pedidos hace y la que menos, en total.
