@@ -12,8 +12,7 @@
 
 7.Sacar las matrículas de los camiones cuyos conductores se llamen Martinez
 
-8.Número de clientes que tiene cada base y el dia que fueron registrados en ella.
 
-9. Cantidad de repartos por cada repartidor en el último año y sacar la media anal.
+9. Cantidad de repartos por cada repartidor en el último año
 
 10.Sucursal que más pedidos hace y la que menos, en total.
